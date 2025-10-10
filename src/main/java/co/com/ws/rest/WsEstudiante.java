@@ -58,4 +58,13 @@ public class WsEstudiante {
             return "{\"mensaje\":\"Error al insertar\"}";
         }
     }
+
+
+    @GET
+    @Path("/promedios")
+    @Produces(MediaType.APPLICATION_JSON)
+    public List<EstudiantesConMaterias> getPromediosEstudiantes() throws Exception {
+        return manager.getPromediosEstudiantes();
+    }
 }
+
